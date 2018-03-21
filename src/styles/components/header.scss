@@ -1,0 +1,40 @@
+/* Everything related to the header will be in this file */
+
+// Colors
+$nav: #89B6CD;
+$nav-item: #d4d4d8;
+$active: #8296ff;
+
+#head {
+  background-image: url('../assets/images/behind-logo.jpg');
+  background-size: 100%;
+}
+
+#logo {
+  display: block;
+  height: auto;
+  margin: 0 auto; // Somehow centers the damn logo
+  width: 250px;
+}
+
+#nav {
+  border: 1px solid black;
+  background-color: $nav;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  line-height: 5rem;
+  width: 100%;
+  li {
+    text-align: left;
+    a {
+      background-color: $nav;
+      color: black;
+      padding: 10px auto;
+      text-decoration: none;
+    }
+    a:hover {
+      color: $nav-item;
+    }
+  }
+}
