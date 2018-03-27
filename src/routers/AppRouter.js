@@ -14,16 +14,18 @@ const AppRouter = () => (
   <BrowserRouter>
     <div>
       <Header />
-      <div id="content">
-        <Switch>
-          <Route path="/" component={Main} exact={true} />
-          <Route path="/services" component={Services} />
-          <Route path="/photonic-light-therapy" component={PhotonicLightTherapy} />
-          <Route path="/sport-massage" component={SportMassage} />
-          <Route path="/testimonials" component={Testimonials} />
-          <Route path="/contact" component={Contact} />
-          <Route component={NotFoundPage} />
-        </Switch>
+      <div id="container">
+        <div id="content">
+          <Switch>
+            <Route path="/" component={Main} exact={true} />
+            <Route path="/services" component={Services} />
+            <Route path="/photonic-light-therapy" component={PhotonicLightTherapy} />
+            <Route path="/sport-massage" component={SportMassage} />
+            <Route path="/testimonials" component={Testimonials} />
+            <Route path="/contact" component={Contact} />
+            <Route component={NotFoundPage} />
+          </Switch>
+        </div>
       </div>
       <Footer />
     </div>
