@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
+    <section>
       <Header />
       <div id="container">
         <div id="content">
@@ -28,7 +28,7 @@ const AppRouter = () => (
         </div>
       </div>
       <Footer />
-    </div>
+    </section>
   </BrowserRouter>
 );
 

@@ -1,8 +1,14 @@
+$footer-background: hsla(0, 19%, 22%, 0.603);
+
 footer {
-	background: aquamarine;
-	display: inline-block;
-	overflow: scroll;
+	background: $footer-background;
+	height: 100px;
 	position: absolute;
-	bottom: 0px;
-	width: 100%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+#copyright__text {
+	color: white;
 }

@@ -1,12 +1,12 @@
 html {
   font-size: 62.5%;
+  height: 100vh;
+  position: relative;
 }
 
 body {
+  clear: both;
   font-family: Helvetica, Arial, sans-serif;
   font-size: $m-size;
-}
-
-.is-active {
-  font-weight: bold;
+  position: relative;
 }

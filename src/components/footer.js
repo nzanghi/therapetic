@@ -10,7 +10,7 @@ const Footer = () => {
         <p id="copyright__text">© Therapetic Hands | Canine and Equine Massage</p>
       </div>
       <div
-        class="fb-like"
+        className="fb-like"
         data-href="https://www.facebook.com/TherapeticHands/"
         data-layout="button"
         data-action="like"
