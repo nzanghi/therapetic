@@ -32,8 +32,7 @@ module.exports = env => {
               loader: 'url-loader',
               options: {
                 limit: 25000,
-                name: "[path][name].[ext]",
-
+                name: '[path][name].[ext]'
               }
             }
           ]
@@ -45,13 +44,19 @@ module.exports = env => {
         },
         {
           test: /\.s?css$/,
-          use: CSSExtract.extract({
-            use: [
-              { loader: 'css-loader' },
-              { loader: 'sass-loader', options: { sourceMap: true } }
-            ]
-          })
+          use: ['css-hot-loader'].concat(
+            ExtractTextPlugin.extract({
+              fallback: 'style-loader',
+              use: ['css-loader', 'sass-loader']
+            })
+          )
         }
+        // {
+        //   test: /\.s?css$/,
+        //   use: CSSExtract.extract({
+        //     use: [{ loader: 'css-loader' }, { loader: 'sass-loader', options: { sourceMap: true } }]
+        //   })
+        // }
       ]
     },
     plugins: [
