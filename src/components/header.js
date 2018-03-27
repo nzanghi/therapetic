@@ -1,35 +1,25 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const logo = require('../assets/images/Logo.png')
+const logo = require('../assets/images/Logo.png');
 
 // You left off here. You need to get this background image setup somehow
 
 const Header = () => {
   return (
-    <div id="head">
-      <Link to="/"><img id="logo" src={logo} alt="Home"></img></Link>
+    <header>
+      <div id="head">
+        <Link to="/">
+          <img id="logo" src={logo} alt="Home" />
+        </Link>
+      </div>
       <ul id="nav">
-        <li className="nav__item">
-          <Link to="/">Main</Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/services">Services</Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/photonic-light-therapy">Photonic Light Therapy</Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/sport-massage">Sport Massage</Link>
-        </li>
-        <li className="nav__item">
-          <Link to="/testimonials">Testimonials</Link>
-        </li>
-        <li className="nav__item">
-          {' '}
-          <Link to="/contact">Contact</Link>
-        </li>
+        <Link to="/">Main</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/photonic-light-therapy">Photonic Light Therapy</Link>
+        <Link to="/sport-massage">Sport Massage</Link>
+        <Link to="/testimonials">Testimonials</Link> <Link to="/contact">Contact</Link>
       </ul>
-    </div>
+    </header>
   );
 };
 
