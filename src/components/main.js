@@ -1,6 +1,20 @@
 import React from 'react';
 
+import importAll from '../utils/importAll';
+
+
+const images = importAll(require.context('../assets/images/massage-pics', true, /.jpg$/i));
+console.log(images);
+
 const Main = () => {
+  let settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
+  images.forEach((value) => console.log(value.property));
   return (
     <div id="main">
       <h1>Welcome!</h1>
