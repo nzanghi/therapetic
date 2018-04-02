@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+
 html {
   font-size: 62.5%;
   height: 100vh;
-  position: relative;
+  width: 100vw;
 }
 
 body {
+  background-image: url('../assets/images/behind-logo.jpg');
+  background-size: cover;
   clear: both;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'IBM Plex Serif', Helvetica, Arial, sans-serif;
   font-size: $m-size;
+  position: relative;
+}
+
+#web-container {
   position: relative;
 }

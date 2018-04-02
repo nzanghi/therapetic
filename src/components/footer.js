@@ -1,23 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// const logo = require('../assets/images/Logo.png');
+import { SocialIcon } from 'react-social-icons';
 
 const Footer = () => {
   return (
-    <footer>
-      <div id="fb-root" />
-      <div id="copyright">
-        <p id="copyright__text">© Therapetic Hands | Canine and Equine Massage</p>
-      </div>
-      <div
-        className="fb-like"
-        data-href="https://www.facebook.com/TherapeticHands/"
-        data-layout="button"
-        data-action="like"
-        data-size="large"
-        data-show-faces="false"
-        data-share="false"
-      />
+    <footer id="footer">
+        <div id="social-media">
+          <SocialIcon className="social-media-item" url="mailto:nicole.hahn07@gmail.com" />
+          <SocialIcon className="social-media-item" url="https://www.facebook.com/TherapeticHands/" />
+          <SocialIcon className="social-media-item" url="https://www.instagram.com/therapetichands/" />
+        </div>
+        <p id="copyright">© Therapetic Hands | Canine and Equine Massage</p>
     </footer>
   );
 };

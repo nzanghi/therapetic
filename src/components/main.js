@@ -14,7 +14,7 @@ const Main = () => {
     slidesToShow: 1,
     slidesToScroll: 1
   };
-  images.forEach((value) => console.log(value.property));
+  // images.forEach((value) => console.log(value.property));
   return (
     <div id="main">
       <h1>Welcome!</h1>

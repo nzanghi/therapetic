@@ -1,14 +1,32 @@
-$footer-background: hsla(0, 19%, 22%, 0.603);
+$footer-background: rgb(39, 34, 34);
 
-footer {
-	background: $footer-background;
-	margin: 50px 0 0 0;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	right: 0;
+#footer {
+  background-color: $footer-background;
+  display: grid;
 }
 
-#copyright__text {
-	color: white;
+#copyright {
+  color: white;
+  font-size: 1.2rem;
+  padding: 0 15px;
+  margin-left: auto;
+  right: 0;
+}
+
+#social-media {
+  margin: 10px auto;
+}
+
+.social-media-item {
+  margin: 0px 10px;
+  height: 48px !important;
+  width: 48px !important;
+}
+
+@media screen and (max-width: 812px) {
+  .footer-container {
+    display: grid;
+    position: absolute;
+    bottom: 0;
+  }
 }

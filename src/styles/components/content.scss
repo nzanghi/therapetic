@@ -1,14 +1,32 @@
-$container-background: hsla(0, 9%, 24%, 0.15);
-$content-background: hsla(0, 10%, 25%, 0.4);
+$content-background: hsla(0, 10%, 25%, 0.80);
 
 #container {
-  background: $container-background;
+  display: grid;
+  grid-template-columns: 150px 2fr;
+  min-height: 800px;
+  max-height: 800px;
 }
 
 #content {
   background-color: $content-background;
-  border: 2px solid gray;
-  padding: 10px 70px;
-  min-height: 1200px;
+  border: 1px solid black;
+  border-left: 0;
+  padding: 20px 30px;
   text-align: left;
+}
+
+
+#content-container {
+	border: 2px solid rgb(31, 10, 10);
+	padding: 0px 20px;
+	height: 100%;
+}
+
+@media screen and (max-width: 812px) {
+  #container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+    max-height: 100vw;
+  }
 }

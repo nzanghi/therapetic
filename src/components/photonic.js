@@ -2,18 +2,19 @@ import React from 'react';
 
 const Photonic = () => {
   return (
-    <div class="photonic">
-      <h1>Photonic Light Therapy</h1>
-      <h2>Blue Light Therapy:</h2>
-      <h3>Skin condition and Wound treatment:</h3>
-      <p>Horse: $40</p>
-      <p>Dog: $30</p>
+    <div className="photonic">
+      <div id="photonic-lights">
+        <h1>Photonic Light Therapy</h1>
+        <h2>Blue Light Therapy:</h2>
+        <h3>Skin condition and Wound treatment:</h3>
+        <p>Horse: $40</p>
+        <p>Dog: $30</p>
 
-      <h2>Red Light Therapy:</h2>
-      <h3>Ligament, Joint, and Tendon Treatment:</h3>
-      <p>Horse: $70</p>
-      <p>Dog: $60</p>
-
+        <h2>Red Light Therapy:</h2>
+        <h3>Ligament, Joint, and Tendon Treatment:</h3>
+        <p>Horse: $70</p>
+        <p>Dog: $60</p>
+      </div>
       <h3>Full Body Treatment:</h3>
       <p>Horse: $85</p>
       <p>Dog: $65</p>
