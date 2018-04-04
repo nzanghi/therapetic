@@ -2,7 +2,7 @@ $nav-background: rgb(75, 55, 55);
 $nav-link-color: white;
 
 .nav {
-  border: 1px solid black;
+  align-items: center;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -14,11 +14,13 @@ $nav-link-color: white;
   text-align: center;
 
   li {
-    display: inline-block;
+    margin: 0;
+    padding: 0;
     a {
-      border: 1px solid orange;
+      height: 100%;
       color: $nav-link-color;
       text-decoration: none;
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     }
     a:hover {
       text-decoration: underline;
