@@ -1,7 +1,12 @@
 $footer-background: rgb(39, 34, 34);
 
-#footer {
+.footer {
   background-color: $footer-background;
+  display: grid;
+}
+
+.content {
+  background-color: red;
   display: grid;
 }
 
@@ -23,10 +28,10 @@ $footer-background: rgb(39, 34, 34);
   width: 48px !important;
 }
 
-@media screen and (max-width: 812px) {
-  .footer-container {
-    display: grid;
-    position: absolute;
-    bottom: 0;
-  }
-}
+// @media screen and (max-width: 812px) {
+//   .footer-container {
+//     display: grid;
+//     position: absolute;
+//     bottom: 0;
+//   }
+// }

@@ -7,35 +7,53 @@ const active = {
 
 const Nav = () => {
   return (
-    <nav>
-      <ul id="nav">
-        <li>
-          <NavLink to="/" activeClassName="active" exact={true}>
-            Main
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/services" activeClassName="active">
-            Services
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/photonic-light-therapy" activeClassName="active">
-            Photonic Light Therapy
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/sport-massage" activeClassName="active">
-            Sport Massage
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/testimonials" activeClassName="active">
-            Testimonials
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+    <ul className="nav" role="navigation">
+      <li
+        onClick={() => {
+          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+        }}
+      >
+        <NavLink to="/" activeClassName="active" exact={true}>
+          Main
+        </NavLink>
+      </li>
+      <li
+        onClick={() => {
+          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+        }}
+      >
+        <NavLink to="/services" activeClassName="active">
+          Services
+        </NavLink>
+      </li>
+      <li
+        onClick={() => {
+          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+        }}
+      >
+        <NavLink to="/photonic-light-therapy" activeClassName="active">
+          Photonic Light Therapy
+        </NavLink>
+      </li>
+      <li
+        onClick={() => {
+          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+        }}
+      >
+        <NavLink to="/sport-massage" activeClassName="active">
+          Sport Massage
+        </NavLink>
+      </li>
+      <li
+        onClick={() => {
+          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+        }}
+      >
+        <NavLink to="/testimonials" activeClassName="active">
+          Testimonials
+        </NavLink>
+      </li>
+    </ul>
   );
 };
 

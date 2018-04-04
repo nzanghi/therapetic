@@ -1,14 +1,19 @@
 /* Everything related to the header will be in this file */
+// margin: 0 auto; -> to center
 
-// Colors
-
-#head {
-  width: auto;
+.head {
+  background: hsla(32, 43%, 55%, 0);
+  display: flex;
+  max-width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // add transition effects here
 }
 
-#logo {
-  display: block;
-  margin: 0 auto; // Somehow centers the logo
-  width: 200px;
+.logo {
+  cursor: pointer;
+  height: 100px;
+  margin: 0px 25px;
+  width: 100px;
 }
-

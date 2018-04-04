@@ -3,22 +3,13 @@ import React from 'react';
 const Photonic = () => {
   return (
     <div className="photonic">
-      <div id="photonic-lights">
-        <h1>Photonic Light Therapy</h1>
-        <h2>Blue Light Therapy:</h2>
-        <h3>Skin condition and Wound treatment:</h3>
-        <p>Horse: $40</p>
-        <p>Dog: $30</p>
-
-        <h2>Red Light Therapy:</h2>
-        <h3>Ligament, Joint, and Tendon Treatment:</h3>
-        <p>Horse: $70</p>
-        <p>Dog: $60</p>
-      </div>
+      <h1>Photonic Light Therapy</h1>
+      <h3>Blue Light Therapy | Skin condition and Wound treatments:</h3>
+      <p>Horse: $40 Dog: $30</p>
+      <h3>Red Light Therapy | Ligament, Joint, and Tendon Treatment:</h3>
+      <p>Horse: $70 Dog: $60</p>
       <h3>Full Body Treatment:</h3>
-      <p>Horse: $85</p>
-      <p>Dog: $65</p>
-
+      <p>Horse: $85 Dog: $65</p>
       <div>
         <p>Note: Length of massage depends on the size of the animal</p>
         <p>Horse massage will last anywhere between 45 minutes and an hour</p>
