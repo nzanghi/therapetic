@@ -5,8 +5,6 @@ import PropTypes from 'prop-types';
 
 class ActiveItemLink extends React.Component {
   render() {
-    // console.log(this);
-    // console.log(location);
     var isActive = location.pathname === this.props.to;
     console.log('isActive: ', isActive);
     var activeClassName = isActive ? 'nav-item active' : '';

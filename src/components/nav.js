@@ -10,7 +10,7 @@ const Nav = () => {
     <ul className="nav" role="navigation">
       <li
         onClick={() => {
-          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
         }}
       >
         <NavLink to="/" activeClassName="active" exact={true}>
@@ -19,7 +19,7 @@ const Nav = () => {
       </li>
       <li
         onClick={() => {
-          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
         }}
       >
         <NavLink to="/services" activeClassName="active">
@@ -28,7 +28,7 @@ const Nav = () => {
       </li>
       <li
         onClick={() => {
-          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
         }}
       >
         <NavLink to="/photonic-light-therapy" activeClassName="active">
@@ -37,7 +37,7 @@ const Nav = () => {
       </li>
       <li
         onClick={() => {
-          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
         }}
       >
         <NavLink to="/sport-massage" activeClassName="active">
@@ -46,7 +46,7 @@ const Nav = () => {
       </li>
       <li
         onClick={() => {
-          window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+          document.getElementById('main').scrollIntoView({ behavior: 'smooth' });
         }}
       >
         <NavLink to="/testimonials" activeClassName="active">

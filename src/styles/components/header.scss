@@ -1,9 +1,12 @@
 /* Everything related to the header will be in this file */
 // margin: 0 auto; -> to center
+$header-background: hsla(32, 43%, 55%, 0);
 
 .head {
-  background: hsla(32, 43%, 55%, 0);
+  background: $header-background;
+  // need to change to transparent and transition to this color
   display: flex;
+  flex-direction: row;
   max-width: 100%;
   position: fixed;
   top: 0;
@@ -16,4 +19,16 @@
   height: 100px;
   margin: 0px 25px;
   width: 100px;
+}
+
+@media screen and (max-width: 990px) {
+  // make it a hamburger
+  .head {
+    flex-direction: column;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
 }

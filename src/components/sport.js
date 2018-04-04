@@ -2,7 +2,7 @@ import React from 'react';
 
 const Sport = () => {
   return (
-    <div id="sport">
+    <div id="main">
       <h1>Certified Sports Massage Therapy</h1>
       <h3>Full Body:</h3>
       <p>Horse: $75</p>

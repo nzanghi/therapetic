@@ -1,26 +1,9 @@
-$content-background: hsla(0, 10%, 25%, 0.80);
+$content-background: rgb(70, 60, 60);
 
-// #container {
-//   display: grid;
-//   grid-template-columns: 150px 2fr;
-//   min-height: 800px;
-//   max-height: 800px;
-// }
-
-// #content {
-//   background-color: $content-background;
-//   border: 1px solid black;
-//   border-left: 0;
-//   padding: 20px 30px;
-//   text-align: left;
-// }
-
-
-// #content-container {
-// 	border: 2px solid rgb(31, 10, 10);
-// 	padding: 0px 20px;
-// 	height: 100%;
-// }
+.content {
+  background-color: $content-background;
+  border: 1px solid black;
+}
 
 // @media screen and (max-width: 812px) {
 //   #container {

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Testimonials = () => {
   return (
-    <div>
+    <div id="main">
       <h1>Testimonials Page</h1>
     </div>
   );

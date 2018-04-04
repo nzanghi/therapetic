@@ -2,16 +2,21 @@ $nav-background: rgb(75, 55, 55);
 $nav-link-color: white;
 
 .nav {
-  // border: 1px solid black;
+  border: 1px solid black;
   display: flex;
   flex-direction: row;
-  list-style-type: none;
   justify-content: space-around;
-  position: relative;
-  z-index: 12;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   width: 100%;
+  z-index: 12;
+  text-align: center;
+
   li {
+    display: inline-block;
     a {
+      border: 1px solid orange;
       color: $nav-link-color;
       text-decoration: none;
     }
@@ -30,3 +35,12 @@ $nav-link-color: white;
 //     display: none;
 //   }
 // }
+
+@media screen and (max-width: 990px) {
+  .nav {
+    flex-direction: column;
+    li {
+      margin: 5px 0;
+    }
+  }
+}
