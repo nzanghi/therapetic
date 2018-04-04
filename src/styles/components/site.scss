@@ -1,6 +1,7 @@
 .site-container {
   display: grid;
   grid-auto-rows: 850px;
+  grid-template-rows: 1250px 200px;
   position: absolute;
   top: 850px;
   width: 100%;
