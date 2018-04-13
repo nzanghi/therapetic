@@ -10,19 +10,21 @@ const scroll = {
   behavior: 'smooth'
 };
 
-const Header = () => {
-  return (
-    <div className="head">
-      <a
-        onClick={() => {
-          document.querySelector('.site-container').scrollIntoView({ block: 'start', behavior: 'smooth' });
-        }}
-      >
-        <img className="logo" src={logo} alt="Home" />
-      </a>
-      <Nav />
-    </div>
-  );
-};
+class Header extends React.Component {
+  render() {
+    return (
+      <div className="head">
+        <a
+          onClick={() => {
+            document.querySelector('.site-container').scrollIntoView({ block: 'start', behavior: 'smooth' });
+          }}
+        >
+          <img className="logo" src={logo} alt="Home" />
+        </a>
+        <Nav />
+      </div>
+    );
+  }
+}
 
 export default Header;

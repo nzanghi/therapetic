@@ -1,24 +1,25 @@
 /* Everything related to the header will be in this file */
 
-$header-background: hsla(32, 43%, 55%, .2);
+$header-background: hsla(32, 43%, 55%, 0.2);
 
 .head {
   background: $header-background;
   // need to change to transparent and transition to this color
   display: flex;
   flex-direction: row;
+  height: 95px;
   max-width: 100%;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
   // add transition effects here
 }
 
 .logo {
   cursor: pointer;
-  height: 100px;
+  height: 90px;
   margin: 0px 25px;
-  width: 100px;
   image-rendering: auto;
 }
 

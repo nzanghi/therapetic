@@ -14,7 +14,6 @@ $nav-link-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
     a {
-      height: 100%;
       font-size: 2rem;
       color: $nav-link-color;
       text-decoration: none;
@@ -31,13 +30,28 @@ $nav-link-color: rgb(255, 255, 255);
 }
 
 .mobile-navigation {
-  display: block;
-  background: purple;
-  position: fixed;
   left: 0;
-  height: 100%;
-  width: 170px;
-  z-index: 99999999;
+  height: 10%;
+  position: fixed;
+  width: 100vw;
+  .mobile-navigation-container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+    li {
+      a {
+        font-size: 1.2rem;
+        color: $nav-link-color;
+        text-decoration: none;
+        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 990px) {
@@ -48,9 +62,9 @@ $nav-link-color: rgb(255, 255, 255);
     font-size: 40px;
     height: 75px;
     position: fixed;
-    margin: 125px 75px;
+    margin: 125px 20px;
     right: 0;
-    top: 0;
+    bottom: 0;
     width: 75px;
   }
 }

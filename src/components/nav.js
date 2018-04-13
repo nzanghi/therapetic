@@ -2,23 +2,26 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import Media from 'react-media';
 
+import MobileNav from '../components/nav.mobile';
+
 // Use this to control scrolling position
 const scroll = { top: 649, left: 0, behavior: 'smooth' };
 
 class Nav extends React.Component {
-  constructor() {
-    super();
-
+  constructor(props) {
+    super(props);
     this.state = {
-      showMobileNav: false
+      showMobileNav: true
     };
-
-    this.handleMobileClick = this.handleMobileClick.bind(this);
     this.handleNavClick = this.handleNavClick.bind(this);
+    this.toggleMobileNavigation = this.toggleMobileNavigation.bind(this);
   }
 
-  componentDidUpdate() {
-    console.log(this.state);
+  toggleMobileNavigation(e) {
+    e.preventDefault();
+    this.setState({
+      showMobileNav: !this.state.showMobileNav
+    });
   }
 
   handleNavClick(e) {
@@ -27,23 +30,16 @@ class Nav extends React.Component {
     content.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
-  handleMobileClick(e) {
-    e.preventDefault();
-    this.setState({
-      showMobileNav: !this.state.showMobileNav
-    });
-  }
-  // window.scroll({top: 1425, behavior: 'smooth'});
   render() {
     return (
       <Media query={{ maxWidth: 900 }}>
         {matches =>
           matches ? (
             <div>
-              <button className="hamburger" onClick={this.handleMobileClick}>
+              {this.state.showMobileNav && <MobileNav />}
+              <button className="hamburger" onClick={this.toggleMobileNavigation}>
                 &#8801;
               </button>
-              {this.state.showMobileNav && <div className="mobile-navigation">Mobile Nav Here</div>}
             </div>
           ) : (
             <ul className="nav" role="navigation">
