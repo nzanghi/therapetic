@@ -3,10 +3,11 @@
 .site-container {
   display: grid;
   grid-template-rows: 750px 1280px 200px;
-  .featured-image-container {
-    margin: 0 auto;
-    #featured-image {
-      width: 600px;
-    }
+}
+
+.featured-image-container {
+  margin: 0 auto;
+  #featured-image {
+    width: 600px;
   }
 }

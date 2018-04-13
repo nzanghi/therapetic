@@ -10,10 +10,11 @@ $body-background:rgb(59, 32, 32);
 
 html {
   font-size: 62.5%;
+  body {
+    background: $body-background;
+    font-family: 'IBM Plex Serif', Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+  }
+  
 }
 
-body {
-  background: $body-background;
-  font-family: 'IBM Plex Serif', Helvetica, Arial, sans-serif;
-  font-size: $m-size;
-}

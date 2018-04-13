@@ -19,6 +19,7 @@ $header-background: hsla(32, 43%, 55%, .2);
   height: 100px;
   margin: 0px 25px;
   width: 100px;
+  image-rendering: auto;
 }
 
 @media screen and (max-width: 990px) {

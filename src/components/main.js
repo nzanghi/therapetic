@@ -17,7 +17,7 @@ const Main = () => {
   // images.forEach((value) => console.log(value.property));
   return (
     <div id="main">
-      <h1 class="centered">Welcome!</h1>
+      <h1>Welcome!</h1>
       <p>
         Nicole has always had a love for Animals and decided at a young age to pursue her passion and promised to find a way
         to help any animal at any cost. She is certified in Equine and Canine Sports Massage therapy, and also offers

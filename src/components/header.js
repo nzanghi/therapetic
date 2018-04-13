@@ -4,16 +4,18 @@ const logo = require('../assets/images/Logo.png');
 
 import Nav from './nav';
 
+const scroll = {
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+};
+
 const Header = () => {
   return (
     <div className="head">
       <a
         onClick={() => {
-          window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-          });
+          window.scroll(scroll);
         }}
       >
         <img className="logo" src={logo} alt="Home" />
