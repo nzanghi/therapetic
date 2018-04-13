@@ -1,0 +1,17 @@
+// Controls image container div and features images
+
+.featured-image-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  z-index: -1;
+  #featured-image {
+    width: 600px;
+  }
+}
+
+// @media screen and (max-width: 990px) {
+
+// }

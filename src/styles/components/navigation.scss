@@ -9,7 +9,6 @@ $nav-link-color: rgb(255, 255, 255);
   margin: 0;
   padding: 0;
   width: 100%;
-  z-index: 12;
   text-align: center;
   li {
     margin: 0;
@@ -38,6 +37,7 @@ $nav-link-color: rgb(255, 255, 255);
   left: 0;
   height: 100%;
   width: 170px;
+  z-index: 99999999;
 }
 
 @media screen and (max-width: 990px) {
@@ -48,9 +48,9 @@ $nav-link-color: rgb(255, 255, 255);
     font-size: 40px;
     height: 75px;
     position: fixed;
-    margin: 50px 50px;
+    margin: 125px 75px;
     right: 0;
-    bottom: 0;
+    top: 0;
     width: 75px;
   }
 }

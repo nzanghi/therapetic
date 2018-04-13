@@ -15,7 +15,7 @@ const Header = () => {
     <div className="head">
       <a
         onClick={() => {
-          window.scroll(scroll);
+          document.querySelector('.site-container').scrollIntoView({ block: 'start', behavior: 'smooth' });
         }}
       >
         <img className="logo" src={logo} alt="Home" />
