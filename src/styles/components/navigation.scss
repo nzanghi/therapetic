@@ -1,5 +1,4 @@
-$nav-background: rgb(75, 55, 55);
-$nav-link-color: rgb(200, 0, 0);
+$nav-link-color: rgb(255, 255, 255);
 
 .nav {
   align-items: center;
@@ -20,7 +19,7 @@ $nav-link-color: rgb(200, 0, 0);
       font-size: 2rem;
       color: $nav-link-color;
       text-decoration: none;
-      // text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+      text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
     }
     a:hover {
       text-decoration: underline;

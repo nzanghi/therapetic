@@ -2,9 +2,8 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Media from 'react-media';
 
-const active = {
-  'text-decoration': 'underline'
-};
+// Use this to control scrolling position
+const scroll = { top: 649, left: 0, behavior: 'smooth' };
 
 class Nav extends React.Component {
   render() {
@@ -19,7 +18,7 @@ class Nav extends React.Component {
             <ul className="nav" role="navigation">
               <li
                 onClick={() => {
-                  window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+                  window.scroll(scroll);
                 }}
               >
                 <NavLink to="/" activeClassName="active" exact={true}>
@@ -28,7 +27,7 @@ class Nav extends React.Component {
               </li>
               <li
                 onClick={() => {
-                  window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+                  window.scroll(scroll);
                 }}
               >
                 <NavLink to="/services" activeClassName="active">
@@ -37,7 +36,7 @@ class Nav extends React.Component {
               </li>
               <li
                 onClick={() => {
-                  window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+                  window.scroll(scroll);
                 }}
               >
                 <NavLink to="/photonic-light-therapy" activeClassName="active">
@@ -46,7 +45,7 @@ class Nav extends React.Component {
               </li>
               <li
                 onClick={() => {
-                  window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+                  window.scroll(scroll);
                 }}
               >
                 <NavLink to="/sport-massage" activeClassName="active">
@@ -55,7 +54,7 @@ class Nav extends React.Component {
               </li>
               <li
                 onClick={() => {
-                  window.scroll({ top: 750, left: 0, behavior: 'smooth' });
+                  window.scroll(scroll);
                 }}
               >
                 <NavLink to="/testimonials" activeClassName="active">

@@ -9,7 +9,7 @@ module.exports = env => {
   const CSSExtract = new ExtractTextPlugin('styles.css');
 
   return {
-    entry: './src/app.js',
+    entry: './src/index.js',
     output: {
       path: path.join(__dirname, 'public'),
       filename: 'bundle.js'
@@ -66,7 +66,7 @@ module.exports = env => {
         template: './src/index.html'
       })
     ],
-    devtool: isProduction ? 'source-map' : 'inline-source-map',
+    devtool: 'eval-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true

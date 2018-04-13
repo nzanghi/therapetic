@@ -1,13 +1,11 @@
-$content-background: rgb(70, 60, 60);
+$content-background: rgb(248, 224, 192);
 
 .content {
   background-color: $content-background;
-  // display: grid;
   padding: 100px 50px;
 }
 
 #main {
-  // border: 1px solid purple;
   box-shadow: 3px 3px 5px 8px rgba(0,0,0,0.6);
   height: 100%;
   padding: 50px 50px 0px 50px;

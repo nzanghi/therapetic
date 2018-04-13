@@ -1,10 +1,12 @@
 // Everything related to site positioning
 // Also where to control size of the 3 grids
 .site-container {
-  background: blue;
   display: grid;
-  grid-template-rows: 650px 1280px 200px;
-  position: absolute;
-  top: 100px;;
-  width: 100%;
+  grid-template-rows: 750px 1280px 200px;
+  .featured-image-container {
+    margin: 0 auto;
+    #featured-image {
+      width: 600px;
+    }
+  }
 }
