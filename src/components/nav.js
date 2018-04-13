@@ -6,14 +6,40 @@ import Media from 'react-media';
 const scroll = { top: 649, left: 0, behavior: 'smooth' };
 
 class Nav extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      showMobileNav: true
+    };
+
+    this.handleMobileClick = this.handleMobileClick.bind(this);
+  }
+
+  componentDidUpdate() {
+    console.log(this.state);
+  }
+
+  handleMobileClick(e) {
+    e.preventDefault();
+    this.setState({
+      showMobileNav: !this.state.showMobileNav
+    });
+  }
+  // window.scroll({top: 1425, behavior: 'smooth'});
   render() {
     return (
       <Media query={{ maxWidth: 990 }}>
         {matches =>
           matches ? (
-            <button className="hamburger" onClick={() => console.log('have to toggle overlay')}>
-              &#8801;
-            </button>
+            <div>
+              <button className="hamburger" onClick={this.handleMobileClick}>
+                &#8801;
+              </button>
+              {this.state.showMobileNav && (
+                <div className="mobile-navigation">Mobile Nav Here</div>
+              )}
+            </div>
           ) : (
             <ul className="nav" role="navigation">
               <li

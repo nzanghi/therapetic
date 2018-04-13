@@ -31,13 +31,26 @@ $nav-link-color: rgb(255, 255, 255);
   text-decoration: underline !important;
 }
 
+.mobile-navigation {
+  display: block;
+  background: purple;
+  position: fixed;
+  left: 0;
+  height: 100%;
+  width: 170px;
+}
+
 @media screen and (max-width: 990px) {
   .hamburger {
-    // border-radius: 120px;
-    height: 100px;
-    position: absolute;
-    margin: 15px 15px;
+    border-radius: 60px;
+    border: 1px solid black;
+    background: #5f1616;
+    font-size: 40px;
+    height: 75px;
+    position: fixed;
+    margin: 50px 50px;
     right: 0;
-    width: 100px;
+    bottom: 0;
+    width: 75px;
   }
 }

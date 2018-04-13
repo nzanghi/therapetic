@@ -4,7 +4,7 @@ import importAll from '../utils/importAll';
 
 
 const images = importAll(require.context('../assets/images/massage-pics', true, /.jpg$/i));
-console.log(images);
+// console.log(images);
 
 const Main = () => {
   let settings = {
