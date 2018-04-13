@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 class App extends React.Component {
   render() {
     return (
-      <div className="site-container">
+      <div className="site-container" ref="SiteContainer">
         <Header />
         <Billboard />
         <Content />
