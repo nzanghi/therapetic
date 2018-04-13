@@ -9,23 +9,29 @@ import Testimonials from '../components/Testimonials';
 import NotFoundPage from '../components/404';
 import Footer from '../components/Footer';
 
+import featured from '..\\assets\\images\\welcome-picture.jpg';
+// C:\Users\Z\Desktop\therapetic\src
 const AppRouter = () => (
   <BrowserRouter>
-    <div>
+    <div className="site-container">
       <Header />
-      <section className="site-container">
-        <div className="content">
-          <Switch>
-            <Route path="/" component={Main} exact={true} />
-            <Route path="/services" component={Services} />
-            <Route path="/photonic-light-therapy" component={PhotonicLightTherapy} />
-            <Route path="/sport-massage" component={SportMassage} />
-            <Route path="/testimonials" component={Testimonials} />
-            <Route component={NotFoundPage} />
-          </Switch>
-        </div>
-        <Footer />
-      </section>
+      <div className="featured-images">
+        <img src={featured}></img>
+      </div>
+      <div className="content">
+        <Switch>
+          <Route path="/" component={Main} exact={true} />
+          <Route path="/services" component={Services} />
+          <Route
+            path="/photonic-light-therapy"
+            component={PhotonicLightTherapy}
+          />
+          <Route path="/sport-massage" component={SportMassage} />
+          <Route path="/testimonials" component={Testimonials} />
+          <Route component={NotFoundPage} />
+        </Switch>
+      </div>
+      <Footer />
     </div>
   </BrowserRouter>
 );

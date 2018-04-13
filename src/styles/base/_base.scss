@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -12,9 +13,7 @@ html {
 }
 
 body {
-  background-image: url('../assets/images/behind-logo.jpg');
-  background-size: cover;
-  clear: both;
+  background: white;
   font-family: 'IBM Plex Serif', Helvetica, Arial, sans-serif;
   font-size: $m-size;
 }

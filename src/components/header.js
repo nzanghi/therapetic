@@ -6,7 +6,7 @@ import Nav from './nav';
 
 const Header = () => {
   return (
-    <header className="head">
+    <div className="head">
       <a
         onClick={() => {
           window.scroll({
@@ -19,7 +19,7 @@ const Header = () => {
         <img className="logo" src={logo} alt="Home" />
       </a>
       <Nav />
-    </header>
+    </div>
   );
 };
 

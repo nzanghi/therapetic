@@ -1,9 +1,10 @@
+// Everything related to site positioning
+// Also where to control size of the 3 grids
 .site-container {
+  background: blue;
   display: grid;
-  grid-auto-rows: 850px;
-  grid-template-rows: 1250px 200px;
+  grid-template-rows: 650px 1280px 200px;
   position: absolute;
-  top: 850px;
+  top: 100px;;
   width: 100%;
-  z-index: -1;
 }
