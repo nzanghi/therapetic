@@ -30,17 +30,19 @@ $nav-link-color: rgb(255, 255, 255);
 }
 
 .mobile-navigation {
-  left: 0;
-  height: 10%;
+  background: hsl(32, 43%, 55%);
   position: fixed;
   width: 100vw;
   .mobile-navigation-container {
-    align-items: center;
+    border: 2px solid yellow;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     list-style-type: none;
+    li:not(:nth-child(1)) {
+      padding-top: 10px;
+    }
     li {
+      margin: 0 auto;
       a {
         font-size: 1.2rem;
         color: $nav-link-color;

@@ -8,13 +8,7 @@ const scroll = { top: 649, left: 0, behavior: 'smooth' };
 class MobileNav extends React.Component {
   constructor(props) {
     super(props);
-    this.handleNavClick = this.handleNavClick.bind(this);
-  }
-
-  handleNavClick(e) {
-    e.preventDefault();
-    const content = document.querySelector('.content');
-    content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.handleNavClick = this.props.handleNavClick.bind(this);
   }
 
   render() {

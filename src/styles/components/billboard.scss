@@ -1,6 +1,7 @@
 // Controls image container div and features images
 
 .featured-image-container {
+  border: 2px solid violet;
   display: flex;
   justify-content: center;
   position: relative;
@@ -11,6 +12,8 @@
   }
 }
 
-// @media screen and (max-width: 990px) {
-
-// }
+@media screen and (max-width: 990px) {
+  #featured-image {
+    width: 100% !important;
+  }
+}

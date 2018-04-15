@@ -4,14 +4,11 @@ import Media from 'react-media';
 
 import MobileNav from '../components/nav.mobile';
 
-// Use this to control scrolling position
-const scroll = { top: 649, left: 0, behavior: 'smooth' };
-
 class Nav extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showMobileNav: true
+      showMobileNav: false
     };
     this.handleNavClick = this.handleNavClick.bind(this);
     this.toggleMobileNavigation = this.toggleMobileNavigation.bind(this);
@@ -26,8 +23,10 @@ class Nav extends React.Component {
 
   handleNavClick(e) {
     e.preventDefault();
-    const content = document.querySelector('.content');
-    content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    window.scrollTo({ behavior: 'smooth', top: 655 });
+    this.setState({
+      showMobileNav: false
+    });
   }
 
   render() {
@@ -36,7 +35,7 @@ class Nav extends React.Component {
         {matches =>
           matches ? (
             <div>
-              {this.state.showMobileNav && <MobileNav />}
+              {this.state.showMobileNav && <MobileNav handleNavClick={this.handleNavClick} />}
               <button className="hamburger" onClick={this.toggleMobileNavigation}>
                 &#8801;
               </button>

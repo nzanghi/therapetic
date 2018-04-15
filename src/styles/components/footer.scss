@@ -3,13 +3,17 @@ $footer-background: rgb(39, 34, 34);
 .footer {
   background-color: $footer-background;
   position: relative;
-  #footer-logo {
-    display: block;
-    height: 800px;
-    margin: 0 auto;
+  .footer-logo-container {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    #footer-logo {
+      position: absolute;
+      height: 800px;
+    }
   }
   .fun {
-    // background: red;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -22,9 +26,14 @@ $footer-background: rgb(39, 34, 34);
       flex: 0.2;
       height: 48px !important;
       width: 48px !important;
+      &.locked {
+        height: 60px;
+        width: 60px;
+      }
     }
     &.snap {
       position: absolute;
+      bottom: auto;
       top: 0;
     }
   }
@@ -38,10 +47,27 @@ $footer-background: rgb(39, 34, 34);
   }
 }
 
-// @media screen and (max-width: 812px) {
-//   .footer-container {
-//     display: grid;
-//     position: absolute;
-//     bottom: 0;
-//   }
-// }
+@media screen and (max-width: 812px) {
+  .fun {
+    .fun-item {
+      &.locked {
+        height: 48px !important;
+        width: 48px !important;
+      }
+    }
+  }
+
+  .footer-logo-container {
+    align-items: center;
+    #footer-logo {
+      // border: 2px solid orange;
+      max-width: 372px;
+      max-height: 400px;
+    }
+  }
+
+  #copyright {
+    font-size: 1.4rem !important;
+    padding: auto;
+  }
+}

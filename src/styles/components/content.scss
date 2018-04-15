@@ -2,13 +2,13 @@ $content-background: rgb(248, 224, 192);
 
 .content {
   background-color: $content-background;
-  padding: 100px 50px;
+  // padding: 30px 20px;
 }
 
 #main {
   box-shadow: 3px 3px 5px 8px rgba(0,0,0,0.6);
   height: 100%;
-  padding: 50px 50px 0px 50px;
+  // padding: 5px 10px;
 }
 
 // @media screen and (max-width: 812px) {
