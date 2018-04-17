@@ -30,11 +30,11 @@ $nav-link-color: rgb(255, 255, 255);
 }
 
 .mobile-navigation {
-  background: hsl(32, 43%, 55%);
+  background: linear-gradient(45deg, rgb(189, 143, 90), rgb(77, 49, 49));
+  outline: 2px solid rgb(49, 2, 2);
   position: fixed;
   width: 100vw;
   .mobile-navigation-container {
-    border: 2px solid yellow;
     display: flex;
     flex-direction: column;
     list-style-type: none;

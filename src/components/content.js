@@ -2,12 +2,12 @@ import React from 'react';
 
 import { Route, Switch } from 'react-router-dom';
 
-import Main from '../components/Main';
-import Services from '../components/Services';
-import PhotonicLightTherapy from '../components/Photonic';
-import SportMassage from '../components/Sport';
-import Testimonials from '../components/Testimonials';
-import NotFoundPage from '../components/404';
+import Main from '../components/content/Main';
+import Services from '../components/content/Services';
+import PhotonicLightTherapy from '../components/content/Photonic';
+import SportMassage from '../components/content/Sport';
+import Testimonials from '../components/content/Testimonials';
+import NotFoundPage from '../components/content/404';
 
 class Content extends React.Component {
   render() {
