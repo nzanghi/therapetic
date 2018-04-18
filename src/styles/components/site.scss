@@ -2,13 +2,9 @@
 // Also where to control size of the 3 grids
 .site-container {
   display: grid;
-  grid-template-rows: 752px 900px 800px;
+  grid-template-rows: 752px 1270px 800px;
 }
 
-@media screen and (max-width: 812px) {
-  .site-container {
-    display: grid;
-    grid-template-rows: 752px 450px 450px;
-  }
+// @media screen and (max-width: 812px) {
   
-}
+// }

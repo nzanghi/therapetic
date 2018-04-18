@@ -1,26 +1,49 @@
-$content-background: rgb(248, 224, 192);
+$content-background: rgb(253, 236, 213);
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 
 .content {
   background-color: $content-background;
+  position: relative;
+  height: 100%;
 }
 
 .main {
-  height: 100%;
   h1 {
-    outline: 4px solid red;
     font-family: 'Kaushan Script', cursive;
     font-size: 48px;
-    margin: 20px 40px;
+    padding: 10px 40px;
     text-align: center;
   }
   .main-content {
-    outline: 4px solid red;
-    margin: 60px 40px;
-    font-size: 32px;
-    text-align: left;
-    .main-content-text {  
-      margin: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 22px;
+    height: 100%;
+    text-align: center;
+    .content-block {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      flex-basis: 50%;
+      // &:nth-of-type(1) {
+      //   background: lightblue;
+      // }
+      &:nth-of-type(2) {
+        background: pink;
+      }
+      .text-block {
+        line-height: 30px;
+        &:nth-child(even) {
+          margin-top: 50%;
+        }
+      }
+    }
+    .main-image {
+      margin: 0px 10px;
+      height: 550px;
+      width: 350px;
     }
   }
 }
@@ -28,5 +51,6 @@ $content-background: rgb(248, 224, 192);
 @media screen and (max-width: 812px) {
   .main-content {
     font-size: 12px !important;
+    justify-content: center;
   }
 }

@@ -3,7 +3,7 @@ import React from 'react';
 const Sport = () => {
   return (
     <section className="main">
-      <h1>Certified Sports Massage Therapy</h1>
+      <h1>Sports Massage Therapy</h1>
       <div className="main-content">
         <h3>Full Body:</h3>
         <p>Horse: $75</p>
