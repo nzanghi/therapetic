@@ -8,6 +8,7 @@ $content-background: rgb(253, 236, 213);
 }
 
 .main {
+  height: 100%;
   h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: 48px;
@@ -15,42 +16,38 @@ $content-background: rgb(253, 236, 213);
     text-align: center;
   }
   .main-content {
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 22px;
     height: 100%;
     text-align: center;
     .content-block {
+      background: gold;
+      outline: 1px solid black;
       align-items: center;
       justify-content: center;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       flex: 1;
       flex-basis: 50%;
-      // &:nth-of-type(1) {
-      //   background: lightblue;
-      // }
-      &:nth-of-type(2) {
-        background: pink;
-      }
       .text-block {
         line-height: 30px;
-        &:nth-child(even) {
-          margin-top: 50%;
+        .text-block-text {
+          border: 2px solid orange;
+          margin: 60px;
         }
       }
     }
-    .main-image {
-      margin: 0px 10px;
+    .main-image-top,
+    .main-image-bottom {
+      margin: 0px 60px;
       height: 550px;
       width: 350px;
     }
   }
 }
 
-@media screen and (max-width: 812px) {
-  .main-content {
+@media screen and (max-width: 900px) {
+  .content-block {
     font-size: 12px !important;
+    flex-direction: column !important;
     justify-content: center;
   }
 }
