@@ -27,7 +27,7 @@ const Main = () => {
           </div>
         </div>
         <div className="content-block">
-          <div claasName="text-block">
+          <div className="text-block">
             <p className="text-block-text">
               She attended Rutgers University where she participated in the program Rutgers University Teaching Herd where she
               promoted horses that needed to be adopted and taught them proper ground manners.
