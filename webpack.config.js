@@ -9,10 +9,12 @@ module.exports = env => {
   console.log('[INFO] Production Build: ', isProduction);
 
   return {
-    entry: './src/index.js',
+    entry: {
+      index: './src/index.js'
+    },
     output: {
-      path: path.join(__dirname, 'public'),
-      filename: 'bundle.js'
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist')
     },
     module: {
       rules: [
@@ -21,25 +23,13 @@ module.exports = env => {
           use: {
             loader: 'file-loader',
             options: {
-              name: 'assets/[name].[hash].[ext]'
+              name: 'assets/[hash:base64:8].[ext]'
             }
           }
         },
         {
-          test: /\.(otf|eot|woff|woff2|ttf|svg)(\?\S*)?$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 25000,
-                name: '[path][name].[ext]'
-              }
-            }
-          ]
-        },
-        {
-          loader: 'babel-loader',
           test: /\.js$/,
+          loader: 'babel-loader',
           exclude: /node_modules/
         },
         {
@@ -48,7 +38,8 @@ module.exports = env => {
             ExtractTextPlugin.extract({
               fallback: 'style-loader',
               use: [
-                { loader: 'css-loader', options: { sourceMap: true, minimize: true } },
+                { loader: 'css-loader', options: { sourceMap: true } },
+                // { loader: 'css-loader', options: { sourceMap: true, minimize: true } },
                 {
                   loader: 'postcss-loader',
                   options: {
@@ -61,23 +52,17 @@ module.exports = env => {
             })
           )
         }
-        // {
-        //   test: /\.s?css$/,
-        //   use: CSSExtract.extract({
-        //     use: [{ loader: 'css-loader' }, { loader: 'sass-loader', options: { sourceMap: true } }]
-        //   })
-        // }
       ]
     },
     plugins: [
       new FaviconsWebpackPlugin('./src/assets/images/Logo.png'),
       new ExtractTextPlugin('styles.css'),
-      new webpack.optimize.UglifyJsPlugin(),
+      // new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html'
       })
     ],
-    devtool: 'eval-source-map',
+    devtool: 'cheap-module-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
       historyApiFallback: true

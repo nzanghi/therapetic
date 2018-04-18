@@ -1,7 +1,7 @@
 const path = require('path');
 const express = require('express');
 const app = express();
-const publicPath = path.join(__dirname, '..', 'public');
+const publicPath = path.resolve(__dirname, '..', 'dist');
 const port = process.env.PORT || 5000;
 
 // Serve assets from public folder
