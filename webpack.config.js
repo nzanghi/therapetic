@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -6,7 +7,6 @@ const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 module.exports = env => {
   const isProduction = env === 'production';
   console.log('[INFO] Production Build: ', isProduction);
-  const CSSExtract = new ExtractTextPlugin('styles.css');
 
   return {
     entry: './src/index.js',
@@ -47,7 +47,17 @@ module.exports = env => {
           use: ['css-hot-loader'].concat(
             ExtractTextPlugin.extract({
               fallback: 'style-loader',
-              use: ['css-loader', 'sass-loader']
+              use: [
+                { loader: 'css-loader', options: { sourceMap: true, minimize: true } },
+                {
+                  loader: 'postcss-loader',
+                  options: {
+                    sourceMap: true,
+                    plugins: loader => [require('autoprefixer')({ browsers: ['IE 6', 'Chrome 9', 'Firefox 14'] })]
+                  }
+                },
+                { loader: 'sass-loader', options: { sourceMap: true } }
+              ]
             })
           )
         }
@@ -61,7 +71,8 @@ module.exports = env => {
     },
     plugins: [
       new FaviconsWebpackPlugin('./src/assets/images/Logo.png'),
-      CSSExtract,
+      new ExtractTextPlugin('styles.css'),
+      new webpack.optimize.UglifyJsPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html'
       })
