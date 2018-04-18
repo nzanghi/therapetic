@@ -1,7 +1,9 @@
 /* Everything related to the header will be in this file */
 
-$header-background: hsla(32, 43%, 55%, 0.2);
+// $header-background: hsla(32, 43%, 55%, 0.8);
+$header-background: hsla(21, 22%, 34%, 0.8);
 $initial-height: 100px;
+$transition-height: 60px;
 .head {
   display: flex;
   flex-direction: row;
@@ -14,22 +16,22 @@ $initial-height: 100px;
   transition: all 1s linear;
   &.locked {
     background: $header-background;
-    height: 70px;
+    height: $transition-height;
   }
 }
 
 .logo {
-  transition: all 1s;
   cursor: pointer;
   height: $initial-height;
   margin: 0px 50px;
   image-rendering: auto;
+  transition: all 1s;
   &.locked {
-    height: 70px;
+    height: $transition-height;
   }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1100px) {
   .head {
     flex-direction: column;
   }

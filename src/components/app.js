@@ -12,8 +12,10 @@ class App extends React.Component {
       scrollY: 0
     };
   }
+  componentDidUpdate() {
+    // console.log(this.state.scrollY);
+  }
   componentDidMount() {
-    console.log(this.props.isTop);
     document.addEventListener('scroll', () => {
       const scrollY = window.scrollY;
       this.setState({ scrollY });
@@ -25,7 +27,7 @@ class App extends React.Component {
         <Header scrollY={this.state.scrollY} />
         <Billboard />
         <Content />
-        <Footer scrollY={this.state.scrollY}/>
+        <Footer scrollY={this.state.scrollY} />
       </div>
     );
   }

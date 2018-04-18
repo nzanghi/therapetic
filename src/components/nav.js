@@ -23,7 +23,7 @@ class Nav extends React.Component {
 
   handleNavClick(e) {
     e.preventDefault();
-    window.scrollTo({ behavior: 'smooth', top: 655 });
+    window.scrollTo({ behavior: 'smooth', top: 692 });
     this.setState({
       showMobileNav: false
     });
@@ -31,7 +31,7 @@ class Nav extends React.Component {
 
   render() {
     return (
-      <Media query={{ maxWidth: 900 }}>
+      <Media query={{ maxWidth: 1100 }}>
         {matches =>
           matches ? (
             <div>

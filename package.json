@@ -8,7 +8,8 @@
     "build:prod": "webpack -p --progress --env production",
     "dev": "webpack-dev-server --hot --inline",
     "test": "jest --config=jest.config.json",
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "local": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",
