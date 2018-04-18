@@ -13,7 +13,7 @@ $transition-height: 60px;
   top: 0;
   width: 100%;
   z-index: 1;
-  transition: all 1s linear;
+  transition: all 0.2s linear;
   &.locked {
     background: $header-background;
     height: $transition-height;
@@ -25,7 +25,7 @@ $transition-height: 60px;
   height: $initial-height;
   margin: 0px 50px;
   image-rendering: auto;
-  transition: all 1s;
+  transition: all 0.2s linear;
   &.locked {
     height: $transition-height;
   }
