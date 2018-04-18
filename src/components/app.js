@@ -6,13 +6,26 @@ import Content from '../components/content';
 import Footer from '../components/Footer';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      scrollY: 0
+    };
+  }
+  componentDidMount() {
+    console.log(this.props.isTop);
+    document.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      this.setState({ scrollY });
+    });
+  }
   render() {
     return (
       <div className="site-container" ref="SiteContainer">
-        <Header />
+        <Header scrollY={this.state.scrollY} />
         <Billboard />
         <Content />
-        <Footer />
+        <Footer scrollY={this.state.scrollY}/>
       </div>
     );
   }

@@ -11,15 +11,18 @@ const scroll = {
 };
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className="head">
+      <div className={this.props.scrollY < 50 ? 'head ' : 'head locked'}>
         <a
           onClick={() => {
             document.querySelector('.site-container').scrollIntoView({ block: 'start', behavior: 'smooth' });
           }}
         >
-          <img className="logo" src={logo} alt="Home" />
+          <img className={this.props.scrollY < 50 ? 'logo' : 'logo locked'} src={logo} alt="Home" />
         </a>
         <Nav />
       </div>
