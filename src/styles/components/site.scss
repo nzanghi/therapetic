@@ -3,7 +3,7 @@
 // MIN FREAKIN MAX
 .site-container {
   display: grid;
-  grid-template-rows: 752px minmax(950px, 100%) 800px;
+  grid-template-rows: 752px minmax(100%, 1150px) 800px;
 }
 
 // @media screen and (max-width: 812px) {

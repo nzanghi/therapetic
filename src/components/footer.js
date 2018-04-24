@@ -12,6 +12,10 @@ class Footer extends React.Component {
     };
     this.handleResize = window.addEventListener('resize', this.handleResize.bind(this));
   }
+  componentDidUpdate() {
+    // have to figure out how to reset footerOffset when router switches
+    console.log(this.props.scrollY + ' > ' + this.state.footerOffset, this.props.scrollY > this.state.footerOffset);
+  }
   componentDidMount() {
     this.setState({
       footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight

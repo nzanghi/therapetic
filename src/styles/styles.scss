@@ -5,6 +5,11 @@
 @import './components/header';
 @import './components/billboard';
 @import './components/navigation';
-@import './components/content';
 @import './components/site';
 @import './components/footer';
+
+@import './components/content/main.scss';
+// @import './components/content/services.scss';
+// @import './components/content/photonic.scss';
+// @import './components/content/sport.scss';
+// @import './components/content/testimonials.scss';

@@ -5,19 +5,36 @@ const Photonic = () => {
     <section className="main">
       <h1>Photonic Light Therapy</h1>
       <div className="main-content">
-        <p>Blue Light Therapy | Skin condition and Wound treatments:</p>
-        <p>Horse: $40 Dog: $30</p>
-      </div>
-      <div className="main-content">
-        <p>Red Light Therapy | Ligament, Joint, and Tendon Treatment:</p>
-        <p>Horse: $70 Dog: $60</p>
-        <p>Full Body Treatment:</p>
-        <p>Horse: $85 Dog: $65</p>
-      </div>
-      <div className="main-content notice">
-        <p>Note: Length of massage depends on the size of the animal</p>
-        <p>Horse massage will last anywhere between 45 minutes and an hour</p>
-        <p>Dog massage will last anywhere between 20 and 45 minutes</p>
+        <div className="content-block">
+          <div className="text-block">
+            <p>Therapetic Hands is very excited to announce the use of Photonic lights for both dogs and horses!</p>
+            <p className="text-block-text">
+              Photonic lights are safe and noninvasive (little to no heat is released, and it is not a laser, but rather an LED light).
+              There are two available settings, the blue light and the red light.
+            </p>
+            <p className="text-block-text">
+              The red light is used to treat deep rooted issues, such as tendons, muscles, injuries, and ligaments. Whereas the blue light
+              (also know as the “ice in a light”) is used to treat skin conditions, funguses and superficial growths.
+            </p>
+          </div>
+        </div>
+        <div className="content-block">
+          <p>Here are some more of the benefits of Photonic lights:</p>
+          <ol>
+            <li>Increases the release of endorphins</li>
+            <li>Improves the strength of tendons and bones </li>
+            <li>Releases tension from muscle spasms</li>
+            <li>Increases circulation</li>
+            <li>Strengthens the number of antibodies in the blood stream</li>
+            <li>Increases cellular regeneration</li>
+            <li>Treats skin fungus</li>
+            <li>Reducing appearance of scars </li>
+            <li>Decreases inflammation, and treats many other skin condit</li>
+          </ol>
+        </div>
+        <div className="content-block">
+          <span> Want to experience the power of Photonic lights? Call or send an email book an appointment!</span>
+        </div>
       </div>
     </section>
   );

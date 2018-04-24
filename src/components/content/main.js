@@ -12,7 +12,7 @@ const Main = () => {
       <h1 id="main-header">Welcome!</h1>
       <div className="main-content">
         <div className="content-block">
-          <img className="main-image-top" src={top} />
+          <img className="main-image" src={top} />
           <div className="text-block">
             <p className="text-block-text">
               Nicole has always had a love for Animals and decided at a young age to pursue her passion and promised to find a way
@@ -37,7 +37,7 @@ const Main = () => {
               session.
             </p>
           </div>
-          <img className="main-image-bottom" src={bottom} />
+          <img className="main-image bottom" src={bottom} />
         </div>
       </div>
     </section>
