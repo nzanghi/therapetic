@@ -20,12 +20,30 @@ module.exports = env => {
       rules: [
         {
           test: /\.(JPE?G|jpe?g|gif|png|svg)$/,
-          use: {
-            loader: 'file-loader',
-            options: {
-              name: 'assets/[hash:base64:8].[ext]'
+          use: [
+            {
+              loader: 'image-webpack-loader',
+              options: {
+                mozjpeg: {
+                  progressive: true,
+                  quality: 50
+                },
+                pngquant: {
+                  quality: '65-90',
+                  speed: 4
+                },
+                webp: {
+                  quality: 75
+                }
+              }
+            },
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'assets/[hash:base64:8].[ext]'
+              }
             }
-          }
+          ]
         },
         {
           test: /\.js$/,
