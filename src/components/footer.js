@@ -10,33 +10,28 @@ class Footer extends React.Component {
     this.state = {
       footerOffset: null
     };
-    this.handleResize = window.addEventListener('resize', this.handleResize.bind(this));
   }
-  componentDidUpdate() {
-    // have to figure out how to reset footerOffset when router switches
-    console.log(this.props.scrollY + ' > ' + this.state.footerOffset, this.props.scrollY > this.state.footerOffset);
+  componentWillReceiveProps() {
+    this.setState({
+      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight - 10
+    });
   }
   componentDidMount() {
     this.setState({
-      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight
-    });
-  }
-  handleResize() {
-    this.setState({
-      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight
+      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight - 10
     });
   }
   render() {
-    const check = this.props.scrollY > this.state.footerOffset;
+    const breakpoint = this.props.scrollY > this.state.footerOffset;
     return (
       <div className="footer" ref="Footer">
         <div className="footer-logo-container">
           <img id="footer-logo" src={FooterLogo} />
         </div>
-        <div className={check ? 'social-container snap' : 'social-container'}>
-          <SocialIcon className={check ? 'fun-item locked' : 'fun-item'} url="mailto:nicole.hahn07@gmail.com" />
-          <SocialIcon className={check ? 'fun-item locked' : 'fun-item'} url="https://www.facebook.com/TherapeticHands/" />
-          <SocialIcon className={check ? 'fun-item locked' : 'fun-item'} url="https://www.instagram.com/therapetichands/" />
+        <div className={breakpoint ? 'social-container snap' : 'social-container'}>
+          <SocialIcon className={breakpoint ? 'fun-item locked' : 'fun-item'} url="mailto:nicole.hahn07@gmail.com" />
+          <SocialIcon className={breakpoint ? 'fun-item locked' : 'fun-item'} url="https://www.facebook.com/TherapeticHands/" />
+          <SocialIcon className={breakpoint ? 'fun-item locked' : 'fun-item'} url="https://www.instagram.com/therapetichands/" />
         </div>
         <p id="copyright">Therapetic Hands | Canine and Equine Massage ©</p>
       </div>

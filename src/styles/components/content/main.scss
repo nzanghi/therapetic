@@ -26,19 +26,29 @@ $content-background: rgb(253, 236, 213);
       flex: 1;
       flex-basis: 50%;
       font-size: 2rem;
+      margin: 20px 0px;
       .text-block {
         flex: 2;
         text-align: center;
         .text-block-text {
           margin: 60px;
           &.normal {
-            margin: 30px;
+            margin: 10px;
+          }
+        }
+        .content-list {
+          list-style: none;
+          margin-bottom: 30px;
+          li {
+            padding: 10px;
           }
         }
       }
+      &.bottom {
+        padding-top: 80px;
+      }
     }
     .main-image {
-      // border: 2px solid purple;
       display: flex;
       margin: 0px 60px;
       height: 550px;
@@ -54,9 +64,11 @@ $content-background: rgb(253, 236, 213);
   .main-image {
     height: 350px;
     width: 250px;
+    &.top {
+      order: -1;
+    }
     &.bottom {
       order: -1;
-      border: 6px solid orange;
     }
   }
 }
