@@ -1,3 +1,5 @@
+$hamburger-color: linear-gradient(60deg, rgb(80, 60, 60), rgb(190, 145, 95));
+$mobile-navigation-color: linear-gradient(45deg, rgb(189, 143, 90), rgb(77, 49, 49));
 $nav-link-color: rgb(255, 255, 255);
 
 .nav {
@@ -27,7 +29,7 @@ $nav-link-color: rgb(255, 255, 255);
 }
 
 .mobile-navigation {
-  background: linear-gradient(45deg, rgb(189, 143, 90), rgb(77, 49, 49));
+  background: $mobile-navigation-color;
   outline: 2px solid rgb(49, 2, 2);
   position: fixed;
   width: 100vw;
@@ -39,10 +41,16 @@ $nav-link-color: rgb(255, 255, 255);
       padding-top: 10px;
     }
     li {
+      // display: flex;
+      // background: yellow;
       margin: 0 auto;
+      padding-bottom: 10px;
       a {
-        font-size: 1.2rem;
+        // background: orange;
+        display: block;
+        padding: 20px;
         color: $nav-link-color;
+        font-size: 1.2rem;
         text-decoration: none;
         text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
       }
@@ -54,16 +62,24 @@ $nav-link-color: rgb(255, 255, 255);
 }
 
 @media screen and (max-width: 1100px) {
+  .mobile-navigation-container {
+    li {
+      a {
+        font-size: 20px !important;
+      }
+    }
+  }
   .hamburger {
+    background: $hamburger-color;
     border-radius: 60px;
     border: 1px solid black;
-    background: #5f1616;
-    font-size: 40px;
+    bottom: 0;    
+    color: rgb(77, 49, 49);
+    font-size: 50px;
     height: 75px;
-    position: fixed;
     margin: 125px 20px;
+    position: fixed;
     right: 0;
-    bottom: 0;
     width: 75px;
   }
 }
