@@ -1,9 +1,11 @@
 import React from 'react';
 
+import photonicPic from '../../assets/images/massage-pics/photonic-massage.JPG';
+
 const Photonic = () => {
   return (
     <section className="main">
-      <h1>Photonic Light Therapy</h1>
+      <h1 id="main-header">Photonic Light Therapy</h1>
       <div className="main-content">
         <div className="content-block">
           <div className="text-block">
@@ -18,6 +20,7 @@ const Photonic = () => {
           </div>
         </div>
         <div className="content-block">
+          <img className="main-image shorter" src={photonicPic} />
           <div className="text-block">
             <p className="text-block-text">Here are some more of the benefits of Photonic lights:</p>
             <ul className="content-list">
@@ -33,7 +36,7 @@ const Photonic = () => {
             </ul>
           </div>
         </div>
-        <div className="content-block bottom">
+        <div className="content-block">
           <div className="text-block">
             <p className="text-block-text">Want to experience the power of Photonic lights? Call or send an email book an appointment!</p>
           </div>

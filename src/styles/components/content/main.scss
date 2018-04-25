@@ -17,7 +17,6 @@ $content-background: rgb(253, 236, 213);
     text-align: center;
   }
   .main-content {
-    height: 100%;
     .content-block {
       align-items: center;
       justify-content: center;
@@ -26,7 +25,6 @@ $content-background: rgb(253, 236, 213);
       flex: 1;
       flex-basis: 50%;
       font-size: 2rem;
-      margin: 20px 0px;
       .text-block {
         flex: 2;
         text-align: center;
@@ -44,9 +42,6 @@ $content-background: rgb(253, 236, 213);
           }
         }
       }
-      &.bottom {
-        padding-top: 80px;
-      }
     }
     .main-image {
       display: flex;
@@ -61,6 +56,9 @@ $content-background: rgb(253, 236, 213);
     font-size: 12px !important;
     flex-direction: column !important;
   }
+  .text-block-text {
+    margin: 20px !important;
+  }
   .main-image {
     height: 350px;
     width: 250px;
@@ -69,6 +67,18 @@ $content-background: rgb(253, 236, 213);
     }
     &.bottom {
       order: -1;
+    }
+    &.wide {
+      width: 100%;
+    }
+    &.shortest {
+      height: 250px !important;
+    }
+    &.shorter {
+      height: 350px !important;
+    }
+    &.short {
+      height: 400px !important;
     }
   }
 }
