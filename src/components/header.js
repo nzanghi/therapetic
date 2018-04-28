@@ -1,14 +1,8 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+
 const logo = require('../assets/images/Logo.png');
 
 import Nav from './nav';
-
-const scroll = {
-  top: 0,
-  left: 0,
-  behavior: 'smooth'
-};
 
 class Header extends React.Component {
   constructor(props) {

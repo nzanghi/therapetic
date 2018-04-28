@@ -13,12 +13,12 @@ class Footer extends React.Component {
   }
   componentWillReceiveProps() {
     this.setState({
-      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight - 10
+      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight - 14
     });
   }
   componentDidMount() {
     this.setState({
-      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight - 10
+      footerOffset: this.refs.Footer.offsetTop - this.refs.Footer.offsetHeight - 14
     });
   }
   render() {

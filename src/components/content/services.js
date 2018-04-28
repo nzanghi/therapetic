@@ -16,10 +16,10 @@ const Services = () => {
             <p className="text-block-text normal">Just light (full body): 60</p>
             <p className="text-block-text normal">Specific area for lights: 30-50</p>
           </div>
-          <img className="main-image top" src={top} />
+          <img className="main-image top short" src={top} />
         </div>
         <div className="content-block">
-          <img className="main-image bottom" src={bottom} />
+          <img className="main-image bottom short" src={bottom} />
           <div className="text-block normal">
             <h2 className="text-block-text normal">Dog: pricing depends on size</h2>
             <p className="text-block-text normal">Full body massage and light: 40-60</p>
