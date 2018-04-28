@@ -1,9 +1,5 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import Media from 'react-media';
-
-// Use this to control scrolling position
-const scroll = { top: 649, left: 0, behavior: 'smooth' };
 
 class MobileNav extends React.Component {
   constructor(props) {
@@ -15,27 +11,27 @@ class MobileNav extends React.Component {
     return (
       <div className="mobile-navigation">
         <ul className="mobile-navigation-container">
-          <li onClick={this.handleNavClick}>
+          <li onClick={() => this.handleNavClick({ mobile: true })}>
             <NavLink to="/" activeClassName="active" exact={true}>
               Main
             </NavLink>
           </li>
-          <li onClick={this.handleNavClick}>
+          <li onClick={() => this.handleNavClick({ mobile: true })}>
             <NavLink to="/services" activeClassName="active">
               Services
             </NavLink>
           </li>
-          <li onClick={this.handleNavClick}>
+          <li onClick={() => this.handleNavClick({ mobile: true })}>
             <NavLink to="/photonic-light-therapy" activeClassName="active">
               Photonic Light Therapy
             </NavLink>
           </li>
-          <li onClick={this.handleNavClick}>
+          <li onClick={() => this.handleNavClick({ mobile: true })}>
             <NavLink to="/sport-massage" activeClassName="active">
               Sport Massage
             </NavLink>
           </li>
-          <li onClick={this.handleNavClick}>
+          <li onClick={() => this.handleNavClick({ mobile: true })}>
             <NavLink to="/testimonials" activeClassName="active">
               Testimonials
             </NavLink>

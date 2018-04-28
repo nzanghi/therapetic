@@ -16,13 +16,13 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div className={this.props.scrollY < 50 ? 'head ' : 'head locked'}>
+      <div className={this.props.scrollY < 10 ? 'head ' : 'head locked'}>
         <a
           onClick={() => {
             document.querySelector('.site-container').scrollIntoView({ block: 'start', behavior: 'smooth' });
           }}
         >
-          <img className={this.props.scrollY < 50 ? 'logo' : 'logo locked'} src={logo} alt="Home" />
+          <img className={this.props.scrollY < 10 ? 'logo' : 'logo locked'} src={logo} alt="Home" />
         </a>
         <Nav />
       </div>

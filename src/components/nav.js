@@ -21,9 +21,9 @@ class Nav extends React.Component {
     });
   }
 
-  handleNavClick(e) {
-    e.preventDefault();
-    window.scrollTo({ behavior: 'smooth', top: 692 });
+  handleNavClick({ mobile }) {
+    const top = mobile ? 390 : 692;
+    window.scrollTo({ behavior: 'smooth', top });
     this.setState({
       showMobileNav: false
     });
