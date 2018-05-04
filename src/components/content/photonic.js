@@ -15,7 +15,7 @@ const Photonic = () => {
             </p>
             <p className="text-block-text">
               The red light is used to treat deep rooted issues, such as tendons, muscles, injuries, and ligaments. Whereas the blue light
-              (also know as the “ice in a light”) is used to treat skin conditions, funguses and superficial growths.
+              (also know as the “ice in a light”) is used to reduce swelling and treat skin conditions, funguses, and superficial growths.
             </p>
           </div>
         </div>

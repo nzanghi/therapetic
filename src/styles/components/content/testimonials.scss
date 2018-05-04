@@ -2,11 +2,28 @@
   display: flex;
   margin: 20px;
   .testimonial {
-    flex: 1;
-    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
     margin: 20px;
-    padding: 50px;
+    padding: 40px;
+    position: relative;
     outline: 2px solid black;
+    p {
+      font-size: 3rem;
+      // background: orange;
+      &.testimonial-text {
+        // background: yellow;
+        margin: 20px 20px;
+      }
+      &.centered {
+        text-align: center;
+      }
+      &.name-bottom {
+        bottom: 5px;
+        right: 80px;
+        position: absolute;
+      }
+    }
   }
 }
 
