@@ -2,8 +2,8 @@ import React from 'react';
 
 import importAll from '../../utils/importAll';
 
-const top = require('../../assets/images/massage-pics/main-horse-massage-top.JPG');
-const bottom = require('../../assets/images/massage-pics/cute.JPG');
+const top = require('../../assets/images/red.jpg');
+const bottom = require('../../assets/images/massage-pics/dog-main.jpg');
 
 const Main = () => {
   // images.forEach((value) => console.log(value.property));
@@ -37,7 +37,7 @@ const Main = () => {
               session.
             </p>
           </div>
-          <img className="main-image bottom short" src={bottom} />
+          <img className="main-image bottom short wide" src={bottom} />
         </div>
       </div>
     </section>

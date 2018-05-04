@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BenefitsPicture from '../../assets/images/benefits.png';
+import SportPicture from '../../assets/images/sport-massage.jpg';
 
 const Sport = () => {
   return (
@@ -27,7 +27,7 @@ const Sport = () => {
               <li>8. And overall makes the animal much happier and more comfortable </li>
             </ul>
           </div>
-          <img className="main-image wide" src={BenefitsPicture} />
+          <img className="main-image wide" src={SportPicture} />
         </div>
       </div>
     </section>
