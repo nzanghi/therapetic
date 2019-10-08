@@ -34,12 +34,12 @@ class Nav extends React.Component {
       <Media query={{ maxWidth: 1200 }}>
         {matches =>
           matches ? (
-            <div>
+            <React.Fragment>
               {this.state.showMobileNav && <MobileNav handleNavClick={this.handleNavClick} />}
               <button className="hamburger" onClick={this.toggleMobileNavigation}>
                 &#8801;
               </button>
-            </div>
+            </React.Fragment>
           ) : (
             <ul className="nav" role="navigation">
               <li onClick={this.handleNavClick}>

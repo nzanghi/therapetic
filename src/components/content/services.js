@@ -15,21 +15,25 @@ const Services = () => {
         <div className="content-block">
           <div className="text-block normal">
             <h2 className="text-block-text normal">Horses:</h2>
-            <p className="text-block-text normal">Full body massage and light treatment: 80</p>
-            <p className="text-block-text normal">Just massage: 70</p>
-            <p className="text-block-text normal">Just light (full body): 60</p>
-            <p className="text-block-text normal">Specific area for lights: 30-50</p>
+            <p className="text-block-text normal">Photonic Light Pain Free Pad System: Full Body Massage: $100</p>
+            <p className="text-block-text normal">Photonic Light Pain Free Pad System: Full Body Pad: $70</p>
+            <p className="text-block-text normal">Full Body Massage + Light Treatment: $80</p>
+            <p className="text-block-text normal">Full Body Massage: $70</p>
+            <p className="text-block-text normal">Full Body Light Treatment: $60</p>
+            <p className="text-block-text normal">Targeted Area with Light Treatment: $30-$50</p>
           </div>
           <img className="main-image top short wide" title="Paris yawning from relaxtion!" src={top} />
         </div>
         <div className="content-block">
           <img className="main-image bottom short wide" src={bottom} />
           <div className="text-block normal">
-            <h2 className="text-block-text normal">Dog: pricing depends on size</h2>
-            <p className="text-block-text normal">Full body massage and light: 40-60</p>
-            <p className="text-block-text normal">Just massage: 35-50</p>
-            <p className="text-block-text normal">Just light 30-40</p>
-            <p className="text-block-text normal">Specific are: 25-400</p>
+            <h2 className="text-block-text normal">Dogs: Pricing will depend on size (small - large)</h2>
+            <p className="text-block-text normal">Photonic Light Pain Free Pad System: Full Body Massage: $80</p>
+            <p className="text-block-text normal">Photonic Light Pain Free Pad System: Full Body Pad: $60</p>
+            <p className="text-block-text normal">Full Body Massage + Light Treatment: $40-60</p>
+            <p className="text-block-text normal">Full Body Massage: $35-50</p>
+            <p className="text-block-text normal">Full Body Light Treatment $30-$40</p>
+            <p className="text-block-text normal">Targeted Area with Light Treatment: $25-$40</p>
           </div>
         </div>
         <div className="content-block">
