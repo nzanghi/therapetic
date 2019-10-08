@@ -35,6 +35,7 @@ $transition-height: 60px;
 @media screen and (max-width: 1200px) {
   .head {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .logo {
