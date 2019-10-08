@@ -35,8 +35,8 @@ class Nav extends React.Component {
         {matches =>
           matches ? (
             <React.Fragment>
-              {this.state.showMobileNav && <MobileNav handleNavClick={this.handleNavClick} />}
-              <button className="hamburger" onClick={this.toggleMobileNavigation}>
+              {this.state.showMobileNav && <MobileNav handleNavClick={this.handleNavClick} toggleMobileNavigation={this.toggleMobileNavigation}/>}
+              <button className={this.props.scrollY < 10 ? 'hamburger hidden' : 'hamburger'} onClick={this.toggleMobileNavigation}>
                 &#8801;
               </button>
             </React.Fragment>

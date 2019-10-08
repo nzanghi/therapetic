@@ -1,15 +1,22 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
 
 class MobileNav extends React.Component {
   constructor(props) {
     super(props);
     this.handleNavClick = this.props.handleNavClick.bind(this);
+    this.toggleMobileNavigation = this.props.toggleMobileNavigation.bind(this);
   }
 
   render() {
     return (
       <div className="mobile-navigation">
+        <button
+          className="button-close"
+          onClick={this.toggleMobileNavigation}
+        >
+          X
+        </button>
         <ul className="mobile-navigation-container">
           <li onClick={() => this.handleNavClick({ mobile: true })}>
             <NavLink to="/" activeClassName="active" exact={true}>

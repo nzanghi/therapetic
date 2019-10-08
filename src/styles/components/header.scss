@@ -1,20 +1,21 @@
 /* Everything related to the header will be in this file */
 
-// $header-background: hsla(32, 43%, 55%, 0.8);
-$header-background: hsla(21, 22%, 34%, 0.8);
+// $header-background: hsla(21, 22%, 34%, 0.8);
+$header-background: linear-gradient(60deg, rgb(80, 60, 60), rgb(190, 145, 95));
 $initial-height: 160px;
 $transition-height: 60px;
+
 .head {
   display: flex;
-  flex-direction: row;
   height: $initial-height;
-  max-width: 100%;
+  justify-content: center;
   position: fixed;
   top: 0;
+  // transition: all 0.25s linear;
   width: 100%;
   z-index: 1;
-  transition: all 0.2s linear;
   &.locked {
+    justify-content: space-between;
     background: $header-background;
     height: $transition-height;
   }
@@ -25,7 +26,7 @@ $transition-height: 60px;
   height: $initial-height;
   margin: 0px 50px;
   image-rendering: auto;
-  transition: all 0.2s linear;
+  // transition: all 0.2s linear;
   &.locked {
     height: $transition-height;
   }
@@ -33,7 +34,7 @@ $transition-height: 60px;
 
 @media screen and (max-width: 1200px) {
   .head {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .logo {

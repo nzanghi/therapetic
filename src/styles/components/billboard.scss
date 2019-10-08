@@ -1,6 +1,7 @@
 // Controls image at top of the webpage
 
 .featured-image-container {
+  overflow: hidden;
   #featured-image {
     width: 100%;
     height: 100%;

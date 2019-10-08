@@ -1,5 +1,9 @@
-$hamburger-color: linear-gradient(60deg, rgb(80, 60, 60), rgb(190, 145, 95));
-$mobile-navigation-color: linear-gradient(170deg, rgb(201, 159, 110), rgb(77, 49, 49));
+$hamburger-color: rgb(186, 140, 96);
+$mobile-navigation-color: linear-gradient(
+  170deg,
+  rgb(201, 159, 110),
+  rgb(77, 49, 49)
+);
 $nav-link-color: rgb(255, 255, 255);
 
 .nav {
@@ -33,6 +37,15 @@ $nav-link-color: rgb(255, 255, 255);
   outline: 2px solid rgb(49, 2, 2);
   position: fixed;
   width: 100%;
+  .button-close {
+    background-blend-mode: color;
+    background: none;
+    border: none;
+    font-size: 30px;
+    position: fixed;
+    top: 5px;
+    right: 20px;
+  }
   .mobile-navigation-container {
     display: flex;
     flex-direction: column;
@@ -56,6 +69,7 @@ $nav-link-color: rgb(255, 255, 255);
   }
 }
 
+// This guy resides in the header tag
 @media screen and (max-width: 1200px) {
   .mobile-navigation-container {
     li {
@@ -65,16 +79,13 @@ $nav-link-color: rgb(255, 255, 255);
     }
   }
   .hamburger {
-    background: $hamburger-color;
-    border-radius: 30px;
-    border: 1px solid black;
-    color: rgb(77, 49, 49);
+    border: none;
+    display: block;
+    background: none;
     font-size: 35px;
-    height: 50px;
-    margin: 0px 5px;
-    position: fixed;
-    right: 0;
-    top: 475px;
-    width: 50px;
+    padding: 0px 5px;
+    &.hidden {
+      display: none;
+    }
   }
 }
