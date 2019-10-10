@@ -11,7 +11,7 @@ $transition-height: 60px;
   justify-content: center;
   position: fixed;
   top: 0;
-  // transition: all 0.25s linear;
+  transition: all 0.2s linear;
   width: 100%;
   z-index: 1;
   &.locked {
@@ -26,9 +26,11 @@ $transition-height: 60px;
   height: $initial-height;
   margin: 0px 50px;
   image-rendering: auto;
-  // transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  width: 200px;
   &.locked {
     height: $transition-height;
+    width: 100px;
   }
 }
 
