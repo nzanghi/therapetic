@@ -11,39 +11,45 @@ class MobileNav extends React.Component {
   render() {
     return (
       <div className="mobile-navigation">
-        <button
-          className="button-close"
-          onClick={this.toggleMobileNavigation}
-        >
+        <button className="button-close" onClick={this.toggleMobileNavigation}>
           X
         </button>
-        <ul className="mobile-navigation-container">
-          <li onClick={() => this.handleNavClick({ mobile: true })}>
-            <NavLink to="/" activeClassName="active" exact={true}>
-              Main
-            </NavLink>
-          </li>
-          <li onClick={() => this.handleNavClick({ mobile: true })}>
-            <NavLink to="/services" activeClassName="active">
-              Services
-            </NavLink>
-          </li>
-          <li onClick={() => this.handleNavClick({ mobile: true })}>
-            <NavLink to="/photonic-light-therapy" activeClassName="active">
-              Photonic Light Therapy
-            </NavLink>
-          </li>
-          <li onClick={() => this.handleNavClick({ mobile: true })}>
-            <NavLink to="/sport-massage" activeClassName="active">
-              Sport Massage
-            </NavLink>
-          </li>
-          <li onClick={() => this.handleNavClick({ mobile: true })}>
-            <NavLink to="/testimonials" activeClassName="active">
-              Testimonials
-            </NavLink>
-          </li>
-        </ul>
+        <NavLink
+          to="/"
+          activeClassName="active"
+          exact={true}
+          onClick={() => this.handleNavClick({ mobile: true })}
+        >
+          Main
+        </NavLink>
+        <NavLink
+          to="/services"
+          activeClassName="active"
+          onClick={() => this.handleNavClick({ mobile: true })}
+        >
+          Services
+        </NavLink>
+        <NavLink
+          to="/photonic-light-therapy"
+          activeClassName="active"
+          onClick={() => this.handleNavClick({ mobile: true })}
+        >
+          Photonic Light Therapy
+        </NavLink>
+        <NavLink
+          to="/sport-massage"
+          activeClassName="active"
+          onClick={() => this.handleNavClick({ mobile: true })}
+        >
+          Sport Massage
+        </NavLink>
+        <NavLink
+          to="/testimonials"
+          activeClassName="active"
+          onClick={() => this.handleNavClick({ mobile: true })}
+        >
+          Testimonials
+        </NavLink>
       </div>
     );
   }

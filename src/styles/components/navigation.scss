@@ -34,50 +34,35 @@ $nav-link-color: rgb(255, 255, 255);
 
 .mobile-navigation {
   background: $mobile-navigation-color;
-  outline: 2px solid rgb(49, 2, 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: fixed;
+  list-style-type: none;
+  outline: 2px solid rgb(49, 2, 2);
   width: 100%;
+  a {
+    padding: 10px;
+    color: $nav-link-color;
+    text-decoration: none;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
   .button-close {
     background-blend-mode: color;
     background: none;
     border: none;
     font-size: 30px;
     position: fixed;
-    top: 5px;
-    right: 20px;
-  }
-  .mobile-navigation-container {
-    display: flex;
-    flex-direction: column;
-    list-style-type: none;
-    li:not(:nth-child(1)) {
-      padding-top: 10px;
-    }
-    li {
-      margin: 0 auto;
-      a {
-        display: block;
-        padding: 10px;
-        color: $nav-link-color;
-        text-decoration: none;
-        text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    }
+    top: 15px;
+    right: 15px;
   }
 }
 
 // This guy resides in the header tag
 @media screen and (max-width: 1200px) {
-  .mobile-navigation-container {
-    li {
-      a {
-        font-size: 20px !important;
-      }
-    }
-  }
   .hamburger {
     border: none;
     display: block;
