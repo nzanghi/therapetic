@@ -1,6 +1,6 @@
 import React from 'react';
 
-import featured from '../assets/images/behind-logo.jpg';
+import featured from '../assets/images/charming.jpg';
 
 /**
  * On pc should have three pictures separated flex with space-between

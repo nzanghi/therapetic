@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import Media from 'react-media';
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+import Media from "react-media";
 
-import MobileNav from '../components/nav.mobile';
+import MobileNav from "../components/nav.mobile";
 
 class Nav extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class Nav extends React.Component {
 
   handleNavClick({ mobile }) {
     const top = mobile ? 390 : 692;
-    window.scroll({ behavior: 'smooth', top: top });
+    window.scroll({ behavior: "smooth", top: top });
     this.setState({
       showMobileNav: false
     });
@@ -35,8 +35,18 @@ class Nav extends React.Component {
         {matches =>
           matches ? (
             <React.Fragment>
-              {this.state.showMobileNav && <MobileNav handleNavClick={this.handleNavClick} toggleMobileNavigation={this.toggleMobileNavigation}/>}
-              <button className={this.props.scrollY < 10 ? 'hamburger hidden' : 'hamburger'} onClick={this.toggleMobileNavigation}>
+              {this.state.showMobileNav && (
+                <MobileNav
+                  handleNavClick={this.handleNavClick}
+                  toggleMobileNavigation={this.toggleMobileNavigation}
+                />
+              )}
+              <button
+                className={
+                  this.props.scrollY < 10 ? "hamburger hidden" : "hamburger"
+                }
+                onClick={this.toggleMobileNavigation}
+              >
                 &#8801;
               </button>
             </React.Fragment>
@@ -50,6 +60,11 @@ class Nav extends React.Component {
               <li onClick={this.handleNavClick}>
                 <NavLink to="/services" activeClassName="active">
                   Services
+                </NavLink>
+              </li>
+              <li onClick={this.handleNavClick}>
+                <NavLink to="/photonic-light-system" activeClassName="active">
+                  Photonic Light Pad System
                 </NavLink>
               </li>
               <li onClick={this.handleNavClick}>

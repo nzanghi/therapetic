@@ -5,6 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import Main from '../components/content/Main';
 import Services from '../components/content/Services';
 import PhotonicLightTherapy from '../components/content/Photonic';
+import PhotonicLightTherapySystem from '../components/content/photonic-system';
 import SportMassage from '../components/content/Sport';
 import Testimonials from '../components/content/Testimonials';
 import NotFoundPage from '../components/content/404';
@@ -17,6 +18,7 @@ class Content extends React.Component {
           <Route path="/" component={Main} exact={true} />
           <Route path="/services" component={Services} />
           <Route path="/photonic-light-therapy" component={PhotonicLightTherapy} />
+          <Route path="/photonic-light-system" component={PhotonicLightTherapySystem} />
           <Route path="/sport-massage" component={SportMassage} />
           <Route path="/testimonials" component={Testimonials} />
           <Route component={NotFoundPage} />

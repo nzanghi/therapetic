@@ -30,6 +30,13 @@ class MobileNav extends React.Component {
           Services
         </NavLink>
         <NavLink
+          to="/photonic-light-system"
+          activeClassName="active"
+          onClick={() => this.handleNavClick({ mobile: true })}
+        >
+          Photonic Light Pain Free Pad System
+        </NavLink>
+        <NavLink
           to="/photonic-light-therapy"
           activeClassName="active"
           onClick={() => this.handleNavClick({ mobile: true })}
