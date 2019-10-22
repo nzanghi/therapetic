@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif');
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Serif");
 
-$body-background:rgba(59, 32, 32, .97);
+// $body-background:rgba(59, 32, 32, .97);
+$body-background: linear-gradient(to right, rgb(80, 60, 60), rgb(190, 145, 95));
 
 * {
   margin: 0;
@@ -13,9 +14,7 @@ html {
   font-size: 62.5%;
   body {
     background: $body-background;
-    font-family: 'IBM Plex Serif', Helvetica, Arial, sans-serif;
+    font-family: "IBM Plex Serif", Helvetica, Arial, sans-serif;
     font-size: $m-size;
   }
-  
 }
-

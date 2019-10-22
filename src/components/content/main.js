@@ -1,6 +1,6 @@
 import React from 'react';
 
-import importAll from '../../utils/importAll';
+// import importAll from '../../utils/importAll';
 
 const top = require('../../assets/images/red.jpg');
 const bottom = require('../../assets/images/massage-pics/dog-main.jpg');
